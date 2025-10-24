@@ -1,0 +1,154 @@
+[
+  {
+    "fio": "дшрд",
+    "datetime": "2025-10-17 12:46",
+    "sales": [
+      {
+        "item": "дло",
+        "quantity": 1,
+        "price": 98798
+      }
+    ],
+    "expenses": [
+      {
+        "description": "дшо",
+        "amount": 1989
+      }
+    ],
+    "cash_balance": 786658756,
+    "halyk_balance": 98798789,
+    "bcc_balance": 765765,
+    "kaspi_balance": 8768768
+  },
+  {
+    "fio": "щшодло",
+    "datetime": "2025-10-17 22:02",
+    "sales": [
+      {
+        "item": "ждлож",
+        "quantity": 1,
+        "price": 2000.0
+      }
+    ],
+    "expenses": [
+      {
+        "description": "щшодло",
+        "amount": 6565.0
+      }
+    ],
+    "cash_balance": 54258.0,
+    "halyk_balance": 561651.0,
+    "bcc_balance": 6516516.0,
+    "kaspi_balance": 564654.0
+  },
+  {
+    "fio": "прор",
+    "datetime": "2025-10-17 22:05",
+    "sales": [
+      {
+        "item": "длтд",
+        "quantity": 1,
+        "price": 6454.0
+      }
+    ],
+    "expenses": [
+      {
+        "description": "орпор",
+        "amount": 521.0
+      }
+    ],
+    "cash_balance": 551151.0,
+    "halyk_balance": 2542454.0,
+    "bcc_balance": 452415415.0,
+    "kaspi_balance": 24524212371565.0
+  },
+  {
+    "fio": "гпрлорло",
+    "datetime": "2025-10-17 22:08",
+    "sales": [
+      {
+        "item": "долдло",
+        "quantity": 1,
+        "price": 65165.0
+      }
+    ],
+    "expenses": [
+      {
+        "description": "длодл",
+        "amount": 145.0
+      }
+    ],
+    "cash_balance": 6516465.0,
+    "halyk_balance": 5465465.0,
+    "bcc_balance": 44654654.0,
+    "kaspi_balance": 654654654.0
+  },
+  {
+    "fio": "Деркач Валерия",
+    "datetime": "2025-10-17 22:14",
+    "sales": [
+      {
+        "item": "Камера наблюдения",
+        "quantity": 5,
+        "price": 14800.0
+      },
+      {
+        "item": "Карточки mf",
+        "quantity": 200,
+        "price": 250.0
+      }
+    ],
+    "expenses": [
+      {
+        "description": "Чай, вода",
+        "amount": 2800.0
+      }
+    ],
+    "cash_balance": 50000.0,
+    "halyk_balance": 564654654.0,
+    "bcc_balance": 54654654.0,
+    "kaspi_balance": 654654654.0
+  },
+  {
+    "fio": "Оатоа",
+    "datetime": "2025-10-17 23:53",
+    "sales": [
+      {
+        "item": "Татьа",
+        "quantity": 1,
+        "price": 3777.0
+      }
+    ],
+    "expenses": [
+      {
+        "description": "Не было",
+        "amount": 0.0
+      }
+    ],
+    "cash_balance": 3773.0,
+    "halyk_balance": 3737.0,
+    "bcc_balance": 73737.0,
+    "kaspi_balance": 3737.0
+  },
+  {
+    "fio": "лоолт",
+    "datetime": "18-10-2025 00:10",
+    "sales": [
+      {
+        "item": "ваваа",
+        "quantity": 1,
+        "price": 5800.0
+      }
+    ],
+    "expenses": [
+      {
+        "description": "ывамыва",
+        "amount": 1200.0
+      }
+    ],
+    "cash_balance": 45000.0,
+    "halyk_balance": 654654.0,
+    "bcc_balance": 654654654.0,
+    "kaspi_balance": 6542132.0
+  }
+]
