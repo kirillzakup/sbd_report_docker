@@ -1,8 +1,10 @@
+# Универсальный Dockerfile для Render
 FROM python:3.11-slim
 
 ENV PYTHONUNBUFFERED=1 \
     PIP_NO_CACHE_DIR=1
 
+# Системные библиотеки для reportlab + шрифты
 RUN apt-get update && apt-get install -y --no-install-recommends \
     build-essential \
     libfreetype6-dev \
@@ -16,15 +18,27 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 
 WORKDIR /app
 
-COPY pyproject.toml /app/pyproject.toml
-
-RUN python -c "import tomllib, pathlib; \
-deps = tomllib.load(open('pyproject.toml','rb'))['project']['dependencies']; \
-pathlib.Path('requirements.txt').write_text('\\n'.join(deps))" \
- && pip install --upgrade pip \
- && pip install -r requirements.txt gunicorn
-
+# Копируем весь репозиторий (чтобы не зависеть от путей)
 COPY . /app/
 
+# Ставим зависимости напрямую (без pyproject/requirements)
+RUN pip install --upgrade pip && \
+    pip install --no-cache-dir \
+      flask \
+      pytelegrambotapi \
+      reportlab \
+      gunicorn
+
 EXPOSE 5000
-CMD ["bash", "-lc", "exec gunicorn -w 2 -k gthread -b 0.0.0.0:${PORT:-5000} app:app"]
+
+# Универсальный запуск:
+# если есть подпапка DiscordQuoteBot/DiscordQuoteBot с app.py — запускаем из неё,
+# иначе запускаем из корня
+CMD bash -lc '\
+  if [ -f "/app/DiscordQuoteBot/DiscordQuoteBot/app.py" ]; then \
+    cd /app/DiscordQuoteBot/DiscordQuoteBot; \
+  else \
+    cd /app; \
+  fi; \
+  exec gunicorn -w 2 -k gthread -b 0.0.0.0:${PORT:-5000} app:app \
+'
